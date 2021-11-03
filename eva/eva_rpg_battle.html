@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>interface</title>
+<style type="text/css">
+body{
+	display:flex;
+	flex-direction:column;
+	background-image:url('asset/paysage_fond.png');
+}
+
+.panel_haut{
+	display:flex;
+}
+
+.panel_bas{
+	display:flex;
+	margin-top:5%;
+	width:100%;
+	background-color:white;
+}
+
+.groupe_ennemi_general{<!--positionnement du groupe général d'ennemis -->
+	display:flex;
+	margin-top:5%;
+	margin-left:20%;
+}
+
+.groupe_ennemi1{<!--positionnement du 1er groupe d'ennemis -->
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-item:center;
+}
+
+.groupe_ennemi2{<!--positionnement du deuxième groupe d'ennemis-->
+	display:flex;
+	justify-content:center;
+	align-item:center;
+	flex-direction:column;
+}
+
+.groupe_hero{<!--positionnement groupe des héros-->
+	margin-top:5%;
+	margin-left:60%;
+	display:flex;
+	flex-direction:column;
+}
+
+.choix_action{<!--fenetre de choix d'action position -->
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	width:30%;
+	border-style:solid;
+	margin-right:5%;
+}
+
+.affichage_perso{<!--fenetre des perso position -->
+	width:30%;
+	display:flex;
+	flex-direction:column;
+	border-style:solid;
+}
+
+.ligne1{
+	display:flex;
+	justify-content: space-evenly;
+}
+
+.ligne2{
+	display:flex;
+	justify-content: space-evenly;
+}
+
+.case{
+	border-style:solid;
+}
+
+.fenetre_dialogue{<!--fenetre de dialogue position -->
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:30%;
+	border-style:solid;
+	margin-right:5%;
+}
+
+.choix_action p:hover{<!--le hover pour la préselection de l'action, texte grossit -->
+	font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+<!--On sépare l'écran en 2 partie, une pour l'ffichage et une pour les boite de dialogue -->
+<div class="panel_haut">
+	<div class="groupe_ennemi_general"><!--on creeer les premier ennemis qu'on sépare en deux groupe -->
+		<div class="groupe_ennemi1"><!--groupe de 2 ennemi -->
+			<img id="ennemi1"
+			src="asset/squelette.png"
+			 alt="un squelette avec un sabre">
+			 <img id="ennemi2"
+			src="asset/squelette.png"
+			 alt="un squelette avec un sabre">
+		</div>
+		<div class="groupe_ennemi2"><!--groupe de 1 ennemi -->
+			<img id="ennemi3"
+			src="asset/squelette.png"
+			 alt="un squelette avec un sabre">
+		</div>
+	</div>
+	<div class="groupe_hero"><!--groupe des 4 héros -->
+		<img id="hero1"
+			src="asset/moine.jpg"
+			 alt="un moine">
+		<img id="hero2"
+			src="asset/robin.jpg"
+			 alt="robin des bois">
+		<img id="hero3"
+			src="asset/chevalier_cot.jpg"
+			 alt="un chevalier">
+		<img id="hero4"
+			src="asset/mage_squelette.jpg"
+			 alt="un mage squelette">
+	</div>
+</div>
+<div class="panel_bas"><!--panel des différentes fnetre de dialogue  -->
+	<div class="choix_action"><!--fenetre de choix des actions -->
+	<p>Action:</p>
+	<p>attaque</p>
+	<p>defense</p>
+	<p>magie</p>
+	<p>item</p>
+	</div>
+	<div class="affichage_perso"><!--fenetre d'affichage des membres du groupe -->
+		<div class="ligne1">
+			<div class="case">
+			<img id="imgRobin"
+			src="asset/avatar_robin.png">
+				<p>Marin</p>
+				<p>PV:52</p>
+				<p>PM:12</p>
+			</div>
+			<div class="case">
+			<img id="imgPaul"
+			src="asset/avatar_paul.png">
+				<p>Paul</p>
+				<p>PV:24</p>
+				<p>PM:60</p>
+			</div>
+		</div>
+		<div class="ligne2">
+			<div class="case">
+			<img id="imgPierre"
+			src="asset/avatar_pierre.png">
+				<p>Pierre</p>
+				<p>PV:111</p>
+				<p>PM:8</p>
+			</div>
+			<div class="case">
+			<img id="imgJacob"
+			src="asset/avatar_jacob.png">
+				<p>Jacob</p>
+				<p>PV:29</p>
+				<p>PM:148</p>
+			</div>
+		</div>
+	</div>
+	<div class="fenetre_dialogue"><!--fenetre de dialogue éphémère -->
+	<p>Tour de Marin</p>
+	</div>
+</div>
+</body>
+</html>
